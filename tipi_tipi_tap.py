@@ -1,97 +1,97 @@
 def newgame(questions, options):
- guesses = []
- correct_guess = 0
- ques_num = 1
+    guesses = []
+    correct_guess = 0
+    ques_num = 1
  
  for key in questions :
- print("--------------------")
- print(key)
- for i in options[ques_num-1]:
- print(i)
- guess = input("Enter (A , B or C): ") 
- guess = guess.upper()
- guesses.append(guess)
- correct_guess += checkanswer(questions.get(key),guess)
+    print("--------------------")
+    print(key)
+    for i in options[ques_num-1]:
+    print(i)
+    guess = input("Enter (A , B or C): ") 
+    guess = guess.upper()
+    guesses.append(guess)
+    correct_guess += checkanswer(questions.get(key),guess)
  
- ques_num += 1
+  ques_num += 1
  
  displayscore(correct_guess,guesses) 
 def checkanswer(answer , guess):
- if answer == guess :
- print("CORRECT!!!")
- return 1
+    if answer == guess :
+    print("CORRECT!!!")
+    return 1
  else :
- print("WRONG!!!")
- return 0
+    print("WRONG!!!")
+    return 0
  
  
-def displayscore(correct_guess,guesses):
- print("--------------------")
- print("RESULTS")
- print("--------------------")
- print("Answers : ",end=" ")
- for i in questions:
- print(questions.get(i),end=" ")
- print()
- print("Guesses : ",end=" ")
- for i in guesses:
- print(i,end=" ")
- print()
+ def displayscore(correct_guess,guesses):
+    print("--------------------")
+    print("RESULTS")
+    print("--------------------")
+    print("Answers : ",end=" ")
+    for i in questions:
+        print(questions.get(i),end=" ")
+    print()
+    print("Guesses : ",end=" ")
+    for i in guesses:
+    print(i,end=" ")
+    print()
  
  score = (int)((correct_guess/len(questions))*100)
- print("Your score is : "+str(score)+ "%")
+    print("Your score is : "+str(score)+ "%")
  
  if score<=50:
- print("You need to enhance your GENERAL KNOWLEDGE!!!! ")
- elif score>50 and score<100:
- print("GOOD!!!!")
- elif score==100:
- print("BRAVO!!!!!!!")
+        print("You need to enhance your GENERAL KNOWLEDGE!!!! ")
+    elif score>50 and score<100:
+    print("GOOD!!!!")
+    elif score==100:
+    print("BRAVO!!!!!!!")
  
- print("--------------")
+    print("--------------")
  
  print("Now returning back to the original game!!!!!")
- print("--------------")
- if colour == "RED":
- li1 = [3 , 4 , 7 ,8]
- print(li1)
- elif colour == "BLUE":
- li2 = [1 , 2 , 5 , 6]
- print(li2)
- elif colour == "YELLOW":
- li3 = [3 , 4, 7 ,8]
- print(li3)
- elif colour == "GREEN":
- li4 = [1 , 2 , 5 ,6]
- print(li4)
- else :
- print("--------------")
- 
- n = int(input("Tipi Tipi Tap Which Number Do You Want? "))
- a = "QUEEN"
- b = "PRINCE"
- c = "PRINCESS"
- d = "KING"
- e = "BLESSING"
- f = "GREAT"
- g = "COMPUTER"
- h = "INTELLIGENT"
- if n == 1:
- print("Congratulations you are a",a,"!!!")
- elif n == 2:
- print("Congratulations you are a",b,"!!!")
- elif n == 3:
- print("Congratulations you are a",c,"!!!")
- elif n == 4:
- print("Congratulations you are a",d,"!!!")
- elif n == 5:
- print("Congratulations you are a",e,"!!!")
- elif n == 6:
- print("Congratulations you are",f,"!!!")
- elif n == 7:
- print("Congratulations you are a",g,"!!!")
- elif n == 8:
- print("Congratulations you are",h,"!!!")
+    print("--------------")
+        if colour == "RED":
+        li1 = [3 , 4 , 7 ,8]
+        print(li1)
+        elif colour == "BLUE":
+        li2 = [1 , 2 , 5 , 6]
+        print(li2)
+        elif colour == "YELLOW":
+        li3 = [3 , 4, 7 ,8]
+        print(li3)
+        elif colour == "GREEN":
+        li4 = [1 , 2 , 5 ,6]
+         print(li4)
+        else :
+        print("--------------")
+
+        n = int(input("Tipi Tipi Tap Which Number Do You Want? "))
+        a = "QUEEN"
+        b = "PRINCE"
+        c = "PRINCESS"
+        d = "KING"
+        e = "BLESSING"
+        f = "GREAT"
+        g = "COMPUTER"
+        h = "INTELLIGENT"
+        if n == 1:
+        print("Congratulations you are a",a,"!!!")
+        elif n == 2:
+        print("Congratulations you are a",b,"!!!")
+        elif n == 3:
+        print("Congratulations you are a",c,"!!!")
+        elif n == 4:
+        print("Congratulations you are a",d,"!!!")
+        elif n == 5:
+        print("Congratulations you are a",e,"!!!")
+        elif n == 6:
+        print("Congratulations you are",f,"!!!")
+        elif n == 7:
+        print("Congratulations you are a",g,"!!!")
+        elif n == 8:
+        print("Congratulations you are",h,"!!!")
 questions = {
  "Who is the Prime Minister of India?":"B",
  "Which is the national flower of India?":"A",
